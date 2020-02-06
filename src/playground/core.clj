@@ -42,9 +42,14 @@
 
 [1 2 3 "bye"]
 
-{:name "Venkat" :age 51 :job "Developer"}
+(def person {:name "Venkat" :age 51 :job "Developer"})
 
-{3 "is a number" "person" "khoovi"}
+(get person :name)
+
+(def example {3 "is a number" "person" "khoovi"})
 
 (coll? #{"apple" "orange"})
 
+(defn sum "Sums a vector of numbers" [a-seq] (apply + a-seq))
+
+(sum '(1 2))
