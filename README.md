@@ -2,14 +2,10 @@
 
 Learning clojure from the book 7 languages in 7 weeks and from https://github.com/anan44/it-starts-with-clojure. I am using Nightcode IDE.
 
-Create new clojure project by running:
+The goal is to build a simple application that:
 
-lein new app playground
+1. Read numbers from a file
 
-Run tests with:
+2. Sums the numbers up
 
-lein test
-
-Start REPL with:
-
-lein repl
+3. Prints the numbers to command line
