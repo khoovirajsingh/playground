@@ -25,7 +25,8 @@
 
 (defn -main
   [& args]
-  (let [text (slurp "numbers.txt")
+  (let [file-name (first args)
+        text (slurp file-name)
         str-coll (parse-numbers text)
         long-coll (map-to-numbers str-coll)
         total (sum long-coll)]
