@@ -2,6 +2,6 @@
   (:gen-class))
 
 (defn sum
-  "Sum a vector of numbers"
-  [a-vector]
-  (apply + a-vector))
+  "Sums a vector of numbers"
+  [a-seq]
+  (apply + a-seq))
