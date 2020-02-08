@@ -4,20 +4,23 @@
 
 (deftest a-test-for-vector
   (testing "sum of numbers from a vector."
-    (is (= (sum [1 2 3]) 6))))
-
-(deftest a-test-for-list
-  (testing "sum of numbers from a vector."
-    (is (= (sum '(1 2 3)) 6))))
+    (is (= 6 (sum [1 2 3])))))
 
 (deftest a-test-for-parsing-numbers
   (testing "parse numbers from a string"
-    (is (= (parse-numbers "1 2 3 4 5 10 300\n") ["1" "2" "3" "4" "5" "10" "300"]))))
+    (is (= ["1" "2" "3" "4" "5" "10" "300"] (parse-numbers "1 2 3 4 5 10 300\n")))))
 
 (deftest a-test-for-converting-string-to-long
   (testing "convert a string number to a long."
-    (is (= (str->long "100") 100))))
+    (is (= 100 (str->long "100")))))
 
 (deftest a-test-for-parsing-strings-to-numbers
   (testing "parse vector of numbers from a vector of strings"
-    (is (= (map-to-numbers ["1" "2" "3" "4" "5" "10" "300"]) [1 2 3 4 5 10 300]))))
+    (is (= [1 2 3 4 5 10 300] (map-to-numbers ["1" "2" "3" "4" "5" "10" "300"])))))
+
+(deftest sum-test
+  (testing "Adding up numbers in collections of different lengths and types."
+    (is (= 10 (sum [5 5])))
+    (is (= 0 (sum '(10 -5 -3 -1 -1))))
+    (is (= 100 (sum #{25 75})))
+    (is (= 0 (sum [])))))
