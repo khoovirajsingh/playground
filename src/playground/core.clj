@@ -17,3 +17,8 @@
   "Converts a string to a long"
   [a-string]
   (Long/valueOf a-string))
+
+(defn map-to-numbers
+  "Maps a sequence of strings to numbers"
+  [a-seq]
+  (map convert-string a-seq))
