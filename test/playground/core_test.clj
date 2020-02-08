@@ -6,9 +6,9 @@
   (testing "sum of numbers from a vector."
     (is (= 6 (sum [1 2 3])))))
 
-(deftest a-test-for-parsing-numbers
-  (testing "parse numbers from a string"
-    (is (= ["1" "2" "3" "4" "5" "10" "300"] (parse-numbers "1 2 3 4 5 10 300\n")))))
+(deftest a-test-for-splitting-numbers
+  (testing "split numbers from a string"
+    (is (= ["1" "2" "3" "4" "5" "10" "300"] (split-words "1 2 3 4 5 10 300\n")))))
 
 (deftest a-test-for-converting-string-to-long
   (testing "convert a string number to a long."

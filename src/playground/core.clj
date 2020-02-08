@@ -8,8 +8,8 @@
 
 (slurp "numbers.txt")
 
-(defn parse-numbers
-  "Parses a string into a vector of numbers"
+(defn split-words
+  "Turns a string of numbers into a collection of numbers"
   [a-string]
   (clojure.string/split a-string #"\s+"))
 
@@ -27,7 +27,7 @@
   [& args]
   (let [file-name (first args)
         text (slurp file-name)
-        str-coll (parse-numbers text)
+        str-coll (split-words text)
         long-coll (map-to-numbers str-coll)
         total (sum long-coll)]
     (println total)))
