@@ -1,55 +1,7 @@
 (ns playground.core
   (:gen-class))
 
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
-
-(str "REPL" "is" "cool")
-
-(str "Tim \"tpope\" Pope")
-
-(println "Tim \"tpope\" Pope")
-
-(prn "Tim \"tpope\" Pope")
-
-(+ 10 10 5)
-
-(+ 3)
-
-(+ 10 5.5)
-
-(- 10 3 2)
-
-(- 3 7)
-
-(* 10 5)
-
-(/ 10 5)
-
-(/ 1 3)
-
-(+ 1 (/ 1 3))
-
-(type 3)
-
-(nil? nil)
-
-(true? (> 1 0))
-
-'(1 2 3 "hello")
-
-[1 2 3 "bye"]
-
-(def person {:name "Venkat" :age 51 :job "Developer"})
-
-(get person :name)
-
-(def example {3 "is a number" "person" "khoovi"})
-
-(coll? #{"apple" "orange"})
-
-(defn sum "Sums a vector of numbers" [a-seq] (apply + a-seq))
-
-(sum '(1 2))
+(defn sum
+  "Sum a vector of numbers"
+  [a-vector]
+  (apply + a-vector))

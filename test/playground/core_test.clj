@@ -3,5 +3,5 @@
             [playground.core :refer :all]))
 
 (deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+  (testing "sum of numbers from a vector."
+    (is (= (sum [1 2 3]) 6))))
