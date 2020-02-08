@@ -5,3 +5,5 @@
   "Sums a vector of numbers"
   [a-seq]
   (apply + a-seq))
+
+(slurp "README.md")
