@@ -16,7 +16,7 @@
 
 (deftest a-test-for-converting-string-to-long
   (testing "convert a string number to a long."
-    (is (= (convert-string "100") 100))))
+    (is (= (str->long "100") 100))))
 
 (deftest a-test-for-parsing-strings-to-numbers
   (testing "parse vector of numbers from a vector of strings"

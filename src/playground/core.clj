@@ -13,12 +13,16 @@
   [a-string]
   (clojure.string/split a-string #"\s+"))
 
-(defn convert-string
+(defn str->long
   "Converts a string to a long"
-  [a-string]
-  (Long/valueOf a-string))
+  [x]
+  (Long/valueOf x))
 
 (defn map-to-numbers
   "Maps a sequence of strings to numbers"
   [a-seq]
-  (map convert-string a-seq))
+  (map str->long a-seq))
+
+(defn -main
+  [& args]
+  (println (sum (map-to-numbers (parse-numbers (slurp "numbers.txt"))))))
