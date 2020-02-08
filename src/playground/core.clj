@@ -6,4 +6,9 @@
   [a-seq]
   (apply + a-seq))
 
-(slurp "README.md")
+(slurp "numbers.txt")
+
+(defn parse-numbers
+  "Parses a string into a vector of numbers"
+  [a-string]
+  (clojure.string/split a-string #"\s+"))
